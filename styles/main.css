@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(94, 145, 189);
+}
+
+#blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+}
+
+ #red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+} 
+
+.box {
+    display: block;
+    position: relative;
+}
