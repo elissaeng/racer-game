@@ -2,10 +2,10 @@ body {
     background-color: rgb(94, 145, 189);
 }
 
-#blue {
+#pirate1 {
     width: 100px;
     height: 100px;
-    background-color: blue;
+    
 
 }
 
@@ -16,6 +16,11 @@ body {
 } 
 
 .box {
+    display: block;
+    position: relative;
+}
+
+img {
     display: block;
     position: relative;
 }
