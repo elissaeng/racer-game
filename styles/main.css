@@ -10,17 +10,41 @@ body {
  #pirate1 {
     width: 150px;
     height: 150px;
+    padding-top: 90px; 
 }    
 
 
 #pirate2 {
-    width: 150px;
-    height: 150px;
+    width: 187px;
+    height: 187px;
+    position: relative;  
+    
 } 
 
+#pirate3 {
+    width: 175px;
+    height: 175px;
+}
+
+#pirate4 {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* #treasure {
+    width: 125px;
+    height: 125px;
+    float: right;
+    top: -37px; 
+    position: relative;
+} */
+
 #treasure {
-    width: 100%;
-    height: 100;
+    width: 125px;
+    height: 125px;
+    float: right;
+    transform: scale(-1, 1);
 }
 
 img {
