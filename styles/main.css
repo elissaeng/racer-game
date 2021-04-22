@@ -10,7 +10,8 @@ body {
  #pirate1 {
     width: 150px;
     height: 150px;
-    padding-top: 90px; 
+    position: relative; 
+    top: 100px;
 }    
 
 
@@ -18,18 +19,8 @@ body {
     width: 187px;
     height: 187px;
     position: relative;  
-    
+    top: 124px
 } 
-
-#pirate3 {
-    width: 175px;
-    height: 175px;
-}
-
-#pirate4 {
-    width: 150px;
-    height: 150px;
-}
 
 
 /* #treasure {
@@ -41,9 +32,11 @@ body {
 } */
 
 #treasure {
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     float: right;
+    position: relative;
+    top: -70px;
     transform: scale(-1, 1);
 }
 

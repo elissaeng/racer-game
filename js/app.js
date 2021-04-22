@@ -8,7 +8,7 @@ $('#click').on('click', function () {
     //const boxWidth = $('.box').width();
     
     //get width of 'ocean'/body
-    const bodyWidth = $(window).width() - 50; 
+    const bodyWidth = $(window).width() - 150; 
     console.log('bodyWidth=', bodyWidth)
 
     $(window).on("keypress", function (event) {
@@ -24,13 +24,13 @@ $('#click').on('click', function () {
         }
         if (pirate1Distance > bodyWidth) {
             console.log('Pirate 1 came in ' + place)
-            const pirate1Result = $(`<h2 class='result'>Pirate 1 came in ${place}</h2>`) 
+            const pirate1Result = $(`<h2 class='result'>Pirate 1 ${place}! The loser must walk the plank!</h2>`) 
             $('body').append(pirate1Result);
             $(window).off("keypress")
         } 
         if (pirate2Distance > bodyWidth) {
             console.log('Pirate 2 came in ' + place)
-            const pirate2Result = $(`<h2 class='result'>Pirate 2 came in ${place}</h2>`)
+            const pirate2Result = $(`<h2 class='result'>Pirate 2 ${place}! The loser must walk the plank!</h2>`)
             $('body').append(pirate2Result);
             $(window).off("keypress")
         }
@@ -40,7 +40,8 @@ $('#click').on('click', function () {
         
     })
     
-        let place = 'first';
+        let place = 'WON';
+        //let place = 'first';
 
         $('#reset').on('click', function () {
         console.log('reset');
