@@ -1,40 +1,42 @@
 $('#click').on('click', function () { 
     
-    let blueDistance = 50
-    let redDistance = 50
+    let pirate1Distance = 50
+    let pirate2Distance = 50
+    const finished = 1000
 
        //get width of boxes
-    const boxWidth = $('.box').width();
+    //const boxWidth = $('.box').width();
     
-    //get width of 'ocean'/body?
-    const bodyWidth = $(window).width() - boxWidth; 
+    //get width of 'ocean'/body
+    const bodyWidth = $(window).width() - 50; 
+    console.log('bodyWidth=', bodyWidth)
 
     $(window).on("keypress", function (event) {
         console.log(event.which)
         if (event.which === 97) {  
-            $('#pirate1').animate({left: blueDistance}, 300, function (){
-                blueDistance += 30;
+            $('#pirate1').animate({left: pirate1Distance}, 300, function (){
+                pirate1Distance += 30;
             }) 
         }   else if (event.which === 108) {
-              $('#red').animate({left: redDistance}, 300, function () {
-                redDistance += 30
+              $('#pirate2').animate({left: pirate2Distance}, 300, function () {
+                pirate2Distance += 30
             })
         }
-        if (blueDistance > bodyWidth) {
-            console.log('Blue came in ' + place)
-            const blueResult = $(`<h2 class='result'>Blue came in ${place}</h2>`) 
-            $('body').append(blueResult);
+        if (pirate1Distance > bodyWidth) {
+            console.log('Pirate 1 came in ' + place)
+            const pirate1Result = $(`<h2 class='result'>Pirate 1 came in ${place}</h2>`) 
+            $('body').append(pirate1Result);
             $(window).off("keypress")
         } 
-        if (redDistance > bodyWidth) {
-            console.log('Red came in ' + place)
-            const redResult = $(`<h2 class='result'>Red came in ${place}</h2>`)
-            $('body').append(redResult);
+        if (pirate2Distance > bodyWidth) {
+            console.log('Pirate 2 came in ' + place)
+            const pirate2Result = $(`<h2 class='result'>Pirate 2 came in ${place}</h2>`)
+            $('body').append(pirate2Result);
             $(window).off("keypress")
         }
 
-        console.log(blueDistance)
-        console.log(redDistance)
+        console.log(pirate1Distance)
+        console.log(pirate2Distance)
         
     })
     
@@ -42,11 +44,11 @@ $('#click').on('click', function () {
 
         $('#reset').on('click', function () {
         console.log('reset');
-        $('#blue').animate({left: 0}, 500, function (){
+        $('#pirate1').animate({left: 0}, 500, function (){
             console.log('finished');
             
         })
-        $('#red').animate({left: 0}, 500, function (){
+        $('#pirate2').animate({left: 0}, 500, function (){
             console.log('finished');
             
             
