@@ -7,6 +7,10 @@ body {
  
 }
 
+#reset {
+    display: none;
+}
+
  #pirate1 {
     width: 150px;
     height: 150px;

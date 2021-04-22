@@ -1,13 +1,11 @@
-$('#click').on('click', function () { 
-    
+function startGame() { 
+    $('#click').hide()
+    $('#reset').hide()
     let pirate1Distance = 50
     let pirate2Distance = 50
     const finished = 1000
 
-       //get width of boxes
-    //const boxWidth = $('.box').width();
-    
-    //get width of 'ocean'/body
+    //get width of body (the "ocean")
     const bodyWidth = $(window).width() - 150; 
     console.log('bodyWidth=', bodyWidth)
 
@@ -27,6 +25,7 @@ $('#click').on('click', function () {
             const pirate1Result = $(`<h2 class='result'>Pirate 1 ${place}! The loser must walk the plank!</h2>`) 
             $('body').append(pirate1Result);
             $(window).off("keypress")
+            $('#reset').show()
         } 
         if (pirate2Distance > bodyWidth) {
             console.log('Pirate 2 came in ' + place)
@@ -41,7 +40,6 @@ $('#click').on('click', function () {
     })
     
         let place = 'WON';
-        //let place = 'first';
 
         $('#reset').on('click', function () {
         console.log('reset');
@@ -56,10 +54,19 @@ $('#click').on('click', function () {
         })
         $('h2').remove()
     })
-})
+}
+
+$('#click').on('click', startGame)
+$('#reset').on('click', startGame)
+
+  
 
 
-  //get random race times
+
+
+
+
+//get random race times
     //const boxTime1 = Math.floor( (Math.random() * 3000) + 1 );
     //const boxTime2 = Math.floor( (Math.random() * 3000) + 1 );
 
