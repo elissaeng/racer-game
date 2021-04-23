@@ -23,15 +23,16 @@ function startGame() {
         if (pirate1Distance > bodyWidth) {
             console.log('Pirate 1 came in ' + place)
             const pirate1Result = $(`<h2 class='result'>Pirate 1 ${place}! The loser must walk the plank!</h2>`) 
-            $('body').append(pirate1Result);
+            $('.victory-container').append(pirate1Result);
             $(window).off("keypress")
             $('#reset').show()
         } 
         if (pirate2Distance > bodyWidth) {
             console.log('Pirate 2 came in ' + place)
             const pirate2Result = $(`<h2 class='result'>Pirate 2 ${place}! The loser must walk the plank!</h2>`)
-            $('body').append(pirate2Result);
+            $('.victory-container').append(pirate2Result);
             $(window).off("keypress")
+            $('#reset').show()
         }
 
         console.log(pirate1Distance)
