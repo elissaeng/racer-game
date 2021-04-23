@@ -3,10 +3,15 @@ body {
     background-size: cover;
     background-position: center; 
     background-size: no-repeat;
+    position: relative;
     height: 100vh;
     
  
 }
+
+/* main {
+    
+} */
 
 #reset {
     display: none;
@@ -15,24 +20,24 @@ body {
  #pirate1 {
     width: 150px;
     height: 150px;
-    position: relative; 
-    top: 100px;
+    position: absolute; 
+    top: 259px;
 }    
 
 
 #pirate2 {
     width: 187px;
     height: 187px;
-    position: relative;  
-    top: 124px
+    position: absolute;  
+    bottom: 16px;
 } 
 
 #treasure {
     width: 100px;
     height: 100px;
-    float: right;
-    position: relative;
-    top: -100px;
+    right: 0;
+    position: absolute;
+    bottom: 210px;
     transform: scale(-1, 1);
 }
 
@@ -43,7 +48,8 @@ img {
 
 h2 {
     text-align: center;
-
+    font-family: 'fredericka the great';
+    color: darkred;
 }
 
 h1 {
@@ -63,19 +69,20 @@ h1 {
 }
 
 #keyA {
-    position: relative;
+    position: absolute;
     text-align: left;
     font-size: 8px;
-    bottom: 314px;
+    bottom: 507px;
+    display: block;
     background-color: burlywood;
     padding: 2px
 }
 
 #keyB {
-    position: relative;
+    position: absolute;
     text-align: left;
     font-size: 8px;
-    bottom: 308px;
+    bottom: 483px;
     background-color: burlywood;
     display: block;
     padding: 2px;
@@ -84,19 +91,25 @@ h1 {
 #flag1 {
     width: 84px;
     height: 61px;
-    float: right;
-    position: relative;
-    bottom: 450px;
-    right: 39px;
+    /* float: right; */
+    position: absolute;
+    bottom: 665px;
+    right: 220px;
     
 }
 
 #flag2 {
     width: 84px;
     height: 61px;
-    float: left;
-    position: relative;
-    bottom: 450px;
-    left: 136px;
+    /* float: left; */
+    position: absolute;
+    bottom: 665px;
+    left: 220px;
     transform: scale(-1, 1);
+}
+
+#star {
+    position: relative;
+    bottom: 200px;
+    
 }
