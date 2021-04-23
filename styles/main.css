@@ -4,6 +4,7 @@ body {
     background-position: center; 
     background-size: no-repeat;
     height: 100vh;
+    
  
 }
 
@@ -59,4 +60,23 @@ h1 {
 #reset {
     position: relative;
     left: 365px;
+}
+
+#ship1 {
+    position: relative;
+    text-align: left;
+    font-size: 8px;
+    bottom: 314px;
+    background-color: burlywood;
+    padding: 2px
+}
+
+#ship2 {
+    position: relative;
+    text-align: left;
+    font-size: 8px;
+    bottom: 308px;
+    background-color: burlywood;
+    display: block;
+    padding: 2px;
 }
