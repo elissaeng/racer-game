@@ -1,6 +1,10 @@
 function startGame() { 
     $('#click').hide()
     $('#reset').hide()
+    // $('#starfish').show()
+    $('#starfish').hide()
+    // $('#starfish').remove()
+    
     let pirate1Distance = 50
     let pirate2Distance = 50
     const finished = 1000
@@ -14,10 +18,12 @@ function startGame() {
         if (event.which === 97) {  
             $('#pirate1').animate({left: pirate1Distance}, 300, function (){
                 pirate1Distance += 30;
+                $('#keyA').hide("keypress")
             }) 
         }   else if (event.which === 108) {
               $('#pirate2').animate({left: pirate2Distance}, 300, function () {
                 pirate2Distance += 30
+                $('#keyL').hide("keypress")
             })
         }
         if (pirate1Distance > bodyWidth) {
@@ -26,6 +32,9 @@ function startGame() {
             $('.victory-container').append(pirate1Result);
             $(window).off("keypress")
             $('#reset').show()
+            $('#starfish').show()
+
+            
         } 
         if (pirate2Distance > bodyWidth) {
             console.log('Pirate 2 came in ' + place)
@@ -33,6 +42,7 @@ function startGame() {
             $('.victory-container').append(pirate2Result);
             $(window).off("keypress")
             $('#reset').show()
+            $('#starfish').show()
         }
 
         console.log(pirate1Distance)
@@ -54,11 +64,14 @@ function startGame() {
             
         })
         $('h2').remove()
+        // $('#starfish').remove()
+        // $('#starfish').hide()
     })
 }
 
 $('#click').on('click', startGame)
 $('#reset').on('click', startGame)
+$('#starfish').hide()
 
   
 
