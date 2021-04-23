@@ -31,7 +31,7 @@ body {
     height: 100px;
     float: right;
     position: relative;
-    top: -70px;
+    top: -100px;
     transform: scale(-1, 1);
 }
 
@@ -49,4 +49,14 @@ h1 {
     text-align: center;
     font-family: 'trade winds';
     font-size: 40px;
+}
+
+#click {
+    position: relative;
+    left: 365px;
+}
+
+#reset {
+    position: relative;
+    left: 365px;
 }
