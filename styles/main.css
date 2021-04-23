@@ -110,10 +110,11 @@ h1 {
 
 
 #starfish {
-    width: 133px;
-    height: 111px;
+    width: 105px;
+    height: 101px;
     position: absolute;
-    bottom: 200px;
+    bottom: 121px;
+    left: 168px;
 }
 
 
@@ -139,4 +140,53 @@ h1 {
     position: absolute;
     bottom: 118px;
     right: 190px;
+}
+
+#seaweed2 {
+    width: 208px;
+    height: 173px;
+    position: absolute;
+    bottom: 159px;
+    left: 30px;
+}
+
+#seaweed3 {
+    width: 208px;
+    height: 173px;
+    position: absolute;
+    bottom: 182px;
+    right: 130px;
+    transform: scale(-1, 1);
+}
+
+#schoolOfFish {
+    width: 208px;
+    height: 173px;
+    position: absolute;
+    bottom: 159px;
+    left: 85px;
+}
+
+#seashell {
+    width: 105px;
+    height: 101px;
+    position: absolute;
+    bottom: 36px;
+    right: 168px;
+}
+
+#purpleShell {
+    width: 105px;
+    height: 101px;
+    position: absolute;
+    bottom: 128px;
+    right: 121px;
+}
+
+#dolphin {
+    width: 270px;
+    height: 282px;
+    position: absolute;
+    bottom: 218px;
+    left: -32px;
 }

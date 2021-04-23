@@ -7,6 +7,10 @@ function startGame() {
     $('#jumpingFish').hide()
     $('#seaweed').hide()
     $('#seaweed2').hide()
+    $('#schoolOfFish').hide()
+    $('#seashell').hide()
+    $('#purpleShell').hide()
+    $('#dolphin').hide()
     
     let pirate1Distance = 50
     let pirate2Distance = 50
@@ -40,6 +44,13 @@ function startGame() {
             $('#jumpingFish').show()
             $('#seaweed').show()
             $('#seaweed2').show()
+            $('#schoolOfFish').show()
+            $('#seashell').show()
+            $('#seaweed3').show()
+            $('#purpleShell').show()
+            $('#dolphin').show()
+        
+
 
             
         } 
@@ -54,6 +65,11 @@ function startGame() {
             ('#jumpingFish').show()
             $('#seaweed').show()
             $('#seaweed2').show()
+            $('#schoolOfFish').show()
+            $('#seashell').show()
+            $('#seaweed3').show()
+            $('#purpleShell').show()
+            $('#dolphin').show()
         }
 
         console.log(pirate1Distance)
@@ -87,6 +103,11 @@ $('#crab').hide()
 $('#jumpingFish').hide()
 $('#seaweed').hide()
 $('#seaweed2').hide()
+$('#schoolOfFish').hide()
+$('#seashell').hide()
+$('#seaweed3').hide()
+$('#purpleShell').hide()
+$('#dolphin').hide()
   
 
 
