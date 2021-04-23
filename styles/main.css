@@ -62,7 +62,7 @@ h1 {
     left: 365px;
 }
 
-#ship1 {
+#keyA {
     position: relative;
     text-align: left;
     font-size: 8px;
@@ -71,7 +71,7 @@ h1 {
     padding: 2px
 }
 
-#ship2 {
+#keyB {
     position: relative;
     text-align: left;
     font-size: 8px;
@@ -79,4 +79,24 @@ h1 {
     background-color: burlywood;
     display: block;
     padding: 2px;
+}
+
+#flag1 {
+    width: 84px;
+    height: 61px;
+    float: right;
+    position: relative;
+    bottom: 450px;
+    right: 39px;
+    
+}
+
+#flag2 {
+    width: 84px;
+    height: 61px;
+    float: left;
+    position: relative;
+    bottom: 450px;
+    left: 136px;
+    transform: scale(-1, 1);
 }
