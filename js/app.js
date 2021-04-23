@@ -3,7 +3,10 @@ function startGame() {
     $('#reset').hide()
     // $('#starfish').show()
     $('#starfish').hide()
-    // $('#starfish').remove()
+    $('#crab').hide()
+    $('#jumpingFish').hide()
+    $('#seaweed').hide()
+    $('#seaweed2').hide()
     
     let pirate1Distance = 50
     let pirate2Distance = 50
@@ -33,6 +36,10 @@ function startGame() {
             $(window).off("keypress")
             $('#reset').show()
             $('#starfish').show()
+            $('#crab').show()
+            $('#jumpingFish').show()
+            $('#seaweed').show()
+            $('#seaweed2').show()
 
             
         } 
@@ -43,6 +50,10 @@ function startGame() {
             $(window).off("keypress")
             $('#reset').show()
             $('#starfish').show()
+            $('#crab').show()
+            ('#jumpingFish').show()
+            $('#seaweed').show()
+            $('#seaweed2').show()
         }
 
         console.log(pirate1Distance)
@@ -72,7 +83,10 @@ function startGame() {
 $('#click').on('click', startGame)
 $('#reset').on('click', startGame)
 $('#starfish').hide()
-
+$('#crab').hide()
+$('#jumpingFish').hide()
+$('#seaweed').hide()
+$('#seaweed2').hide()
   
 
 

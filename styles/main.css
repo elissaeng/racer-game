@@ -5,8 +5,6 @@ body {
     background-size: no-repeat;
     position: relative;
     height: 100vh;
-    
- 
 }
 
 /* main {
@@ -111,12 +109,34 @@ h1 {
 }
 
 
-
-
-
-
 #starfish {
+    width: 133px;
+    height: 111px;
     position: absolute;
     bottom: 200px;
-    
+}
+
+
+#crab {
+    width: 231px;
+    height: 223px;
+    position: absolute;
+    bottom: -1px;
+}
+
+
+#jumpingFish {
+    width: 315px;
+    height: 111px;
+    position: absolute;
+    bottom: 317px;
+    right: 190px;
+}
+
+#seaweed {
+    width: 208px;
+    height: 173px;
+    position: absolute;
+    bottom: 118px;
+    right: 190px;
 }
