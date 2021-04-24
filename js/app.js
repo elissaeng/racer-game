@@ -1,20 +1,26 @@
 function startGame() { 
     $('#click').hide()
     $('#reset').hide()
-    // $('#starfish').show()
     $('#starfish').hide()
     $('#crab').hide()
     $('#jumpingFish').hide()
     $('#seaweed').hide()
     $('#seaweed2').hide()
+    $('#seaweed3').hide()
     $('#schoolOfFish').hide()
     $('#seashell').hide()
     $('#purpleShell').hide()
     $('#dolphin').hide()
+    $('#gamesound')[0].play()
+    console.log($('#gamesound'))
+    // $('#gamesound')[1].play()
+    $('#song')[0].pause()
     
     let pirate1Distance = 50
     let pirate2Distance = 50
     const finished = 1000
+
+    let isPlaying = false;
 
     //get width of body (the "ocean")
     const bodyWidth = $(window).width() - 150; 
@@ -22,6 +28,12 @@ function startGame() {
 
     $(window).on("keypress", function (event) {
         console.log(event.which)
+        if (isPlaying === false) {
+            isPlaying = true;
+            $('#song')[0].currentTime=0
+            $('#song')[0].volume=.2
+            $('#song')[0].play()
+        }
         if (event.which === 97) {  
             $('#pirate1').animate({left: pirate1Distance}, 300, function (){
                 pirate1Distance += 30;
@@ -54,7 +66,7 @@ function startGame() {
 
             
         } 
-        if (pirate2Distance > bodyWidth) {
+        else if (pirate2Distance > bodyWidth) {
             console.log('Pirate 2 came in ' + place)
             const pirate2Result = $(`<h2 class='result'>Pirate 2 ${place}! The loser must walk the plank!</h2>`)
             $('.victory-container').append(pirate2Result);
@@ -62,7 +74,7 @@ function startGame() {
             $('#reset').show()
             $('#starfish').show()
             $('#crab').show()
-            ('#jumpingFish').show()
+            $('#jumpingFish').show()
             $('#seaweed').show()
             $('#seaweed2').show()
             $('#schoolOfFish').show()
