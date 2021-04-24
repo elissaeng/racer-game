@@ -61,12 +61,7 @@ function startGame() {
             $('#seaweed3').show()
             $('#purpleShell').show()
             $('#dolphin').show()
-        
-
-
-            
-        } 
-        else if (pirate2Distance > bodyWidth) {
+        }   else if (pirate2Distance > bodyWidth) {
             console.log('Pirate 2 came in ' + place)
             const pirate2Result = $(`<h2 class='result'>Pirate 2 ${place}! The loser must walk the plank!</h2>`)
             $('.victory-container').append(pirate2Result);
@@ -99,12 +94,10 @@ function startGame() {
         })
         $('#pirate2').animate({left: 0}, 500, function (){
             console.log('finished');
-            
-            
-        })
-        $('h2').remove()
-        // $('#starfish').remove()
-        // $('#starfish').hide()
+            })
+        
+            $('h2').remove()
+     
     })
 }
 
