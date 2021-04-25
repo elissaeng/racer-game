@@ -7,10 +7,6 @@ body {
     height: 100vh;
 }
 
-/* main {
-    
-} */
-
 #reset {
     display: none;
 }
@@ -21,7 +17,6 @@ body {
     position: absolute; 
     top: 259px;
 }    
-
 
 #pirate2 {
     width: 187px;
@@ -108,7 +103,6 @@ h1 {
     transform: scale(-1, 1);
 }
 
-
 #starfish {
     width: 105px;
     height: 101px;
@@ -117,14 +111,12 @@ h1 {
     left: 168px;
 }
 
-
 #crab {
     width: 231px;
     height: 223px;
     position: absolute;
     bottom: -1px;
 }
-
 
 #jumpingFish {
     width: 315px;

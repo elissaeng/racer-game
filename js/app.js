@@ -1,88 +1,86 @@
 function startGame() { 
-    $('#click').hide()
-    $('#reset').hide()
-    $('#starfish').hide()
-    $('#crab').hide()
-    $('#jumpingFish').hide()
-    $('#seaweed').hide()
-    $('#seaweed2').hide()
-    $('#seaweed3').hide()
-    $('#schoolOfFish').hide()
-    $('#seashell').hide()
-    $('#purpleShell').hide()
-    $('#dolphin').hide()
-    $('#gamesound')[0].play()
-    console.log($('#gamesound'))
-    // $('#gamesound')[1].play()
-    $('#song')[0].pause()
+    $('#click').hide();
+    $('#reset').hide();
+    $('#starfish').hide();
+    $('#crab').hide();
+    $('#jumpingFish').hide();
+    $('#seaweed').hide();
+    $('#seaweed2').hide();
+    $('#seaweed3').hide();
+    $('#schoolOfFish').hide();
+    $('#seashell').hide();
+    $('#purpleShell').hide();
+    $('#dolphin').hide();
+    $('#gamesound')[0].play();
+    console.log($('#gamesound'));
+    $('#song')[0].pause();
     
-    let pirate1Distance = 50
-    let pirate2Distance = 50
-    const finished = 1000
+    let pirate1Distance = 50;
+    let pirate2Distance = 50;
+    const finished = 1000;
 
     let isPlaying = false;
 
-    //get width of body (the "ocean")
     const bodyWidth = $(window).width() - 150; 
-    console.log('bodyWidth=', bodyWidth)
+    console.log('bodyWidth=', bodyWidth);
 
     $(window).on("keypress", function (event) {
-        console.log(event.which)
+        console.log(event.which);
         if (isPlaying === false) {
             isPlaying = true;
-            $('#song')[0].currentTime=0
-            $('#song')[0].volume=.2
-            $('#song')[0].play()
+            $('#song')[0].currentTime=0;
+            $('#song')[0].volume=.2;
+            $('#song')[0].play();
         }
         if (event.which === 97) {  
             $('#pirate1').animate({left: pirate1Distance}, 300, function (){
                 pirate1Distance += 30;
-                $('#keyA').hide("keypress")
+                $('#keyA').hide("keypress");
             }) 
         }   else if (event.which === 108) {
               $('#pirate2').animate({left: pirate2Distance}, 300, function () {
-                pirate2Distance += 30
-                $('#keyL').hide("keypress")
+                pirate2Distance += 30;
+                $('#keyL').hide("keypress");
             })
         }
         if (pirate1Distance > bodyWidth) {
-            console.log('Pirate 1 came in ' + place)
-            const pirate1Result = $(`<h2 class='result'>Pirate 1 ${place}! The loser must walk the plank!</h2>`) 
+            console.log('Pirate 1 came in ' + place);
+            const pirate1Result = $(`<h2 class='result'>Pirate 1 ${place}! The loser must walk the plank!</h2>`); 
             $('.victory-container').append(pirate1Result);
-            $(window).off("keypress")
-            $('#reset').show()
-            $('#starfish').show()
-            $('#crab').show()
-            $('#jumpingFish').show()
-            $('#seaweed').show()
-            $('#seaweed2').show()
-            $('#schoolOfFish').show()
-            $('#seashell').show()
-            $('#seaweed3').show()
-            $('#purpleShell').show()
-            $('#dolphin').show()
+            $(window).off("keypress");
+            $('#reset').show();
+            $('#starfish').show();
+            $('#crab').show();
+            $('#jumpingFish').show();
+            $('#seaweed').show();
+            $('#seaweed2').show();
+            $('#schoolOfFish').show();
+            $('#seashell').show();
+            $('#seaweed3').show();
+            $('#purpleShell').show();
+            $('#dolphin').show();
         }   else if (pirate2Distance > bodyWidth) {
-            console.log('Pirate 2 came in ' + place)
-            const pirate2Result = $(`<h2 class='result'>Pirate 2 ${place}! The loser must walk the plank!</h2>`)
+            console.log('Pirate 2 came in ' + place);
+            const pirate2Result = $(`<h2 class='result'>Pirate 2 ${place}! The loser must walk the plank!</h2>`);
             $('.victory-container').append(pirate2Result);
-            $(window).off("keypress")
-            $('#reset').show()
-            $('#starfish').show()
-            $('#crab').show()
-            $('#jumpingFish').show()
-            $('#seaweed').show()
-            $('#seaweed2').show()
-            $('#schoolOfFish').show()
-            $('#seashell').show()
-            $('#seaweed3').show()
-            $('#purpleShell').show()
-            $('#dolphin').show()
+            $(window).off("keypress");
+            $('#reset').show();
+            $('#starfish').show();
+            $('#crab').show();
+            $('#jumpingFish').show();
+            $('#seaweed').show();
+            $('#seaweed2').show();
+            $('#schoolOfFish').show();
+            $('#seashell').show();
+            $('#seaweed3').show();
+            $('#purpleShell').show();
+            $('#dolphin').show();
         }
 
-        console.log(pirate1Distance)
-        console.log(pirate2Distance)
+        console.log(pirate1Distance);
+        console.log(pirate2Distance);
         
-    })
+    });
     
         let place = 'WON';
 
@@ -96,23 +94,23 @@ function startGame() {
             console.log('finished');
             })
         
-            $('h2').remove()
+            $('h2').remove();
      
-    })
+    });
 }
 
-$('#click').on('click', startGame)
-$('#reset').on('click', startGame)
-$('#starfish').hide()
-$('#crab').hide()
-$('#jumpingFish').hide()
-$('#seaweed').hide()
-$('#seaweed2').hide()
-$('#schoolOfFish').hide()
-$('#seashell').hide()
-$('#seaweed3').hide()
-$('#purpleShell').hide()
-$('#dolphin').hide()
+$('#click').on('click', startGame);
+$('#reset').on('click', startGame);
+$('#starfish').hide();
+$('#crab').hide();
+$('#jumpingFish').hide();
+$('#seaweed').hide();
+$('#seaweed2').hide();
+$('#schoolOfFish').hide();
+$('#seashell').hide();
+$('#seaweed3').hide();
+$('#purpleShell').hide();
+$('#dolphin').hide();
   
 
 
@@ -120,24 +118,6 @@ $('#dolphin').hide()
 
 
 
-//get random race times
-    //const boxTime1 = Math.floor( (Math.random() * 3000) + 1 );
-    //const boxTime2 = Math.floor( (Math.random() * 3000) + 1 );
 
-  // $('#blue').animate({left: bodyWidth}, boxTime1, function (){
-    //     console.log('finished');
-    //     ifCompleted()
-    //     console.log('Blue came in ' + place)
-    //     const blueResult = $(`<h2>Blue came in ${place}</h2>`) 
-    //     $('body').append(blueResult);
-    // })xs
-
-    // $('#red').animate({left: bodyWidth}, 200, function () {
-    //     console.log('hooray')
-    //     ifCompleted()
-    //     console.log('Red came in ' + place)
-    //     const redResult = $(`<h2>Red came in ${place}</h2>`)
-    //     $('body').append(redResult);
-    // })
 
   
